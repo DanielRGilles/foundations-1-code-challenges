@@ -101,7 +101,9 @@ Output:
 
 export function listNamesOfAllFruits(arr) {
     let fruitNames = [];
-    fruitNames = arr.filter(item => item.id);
-    fruitNames = arr.filter(item => item.category === 'fruit');
+    
+    fruitNames = arr
+        .filter(item => item.category === 'fruit')
+        .map(item => item.id);
     return fruitNames;
 }
